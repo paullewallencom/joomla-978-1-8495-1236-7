@@ -1,0 +1,10 @@
+Converted and edited for !JoComment 4 by JonusC, based on the "Yolks" series by Bad Blood. Check his stuff out at bad-blood.deviantart.com
+
+Be sure to credit him somewhere on your site if you use these!
+
+
+Install - upload the "Yolks" folder to...
+
+/public_html/components/com_comment/joscomment/emoticons/
+
+...and the Emoticon set should appear in the component backend for !JoComment 4.

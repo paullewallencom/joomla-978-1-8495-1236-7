@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/css.css" type="text/css" />
+	</head>
+	<body>
+		<div id="comment">
+			<!-- <<< html code above is just to allow preview of template -->
+
+			JOOMLACOMMENT TEMPLATE : default-emotop
+
+			/*-----------------------------------------------------------*/
+			/*--  only {xxx}{/xxx} blocks are taken in account  ---------*/
+			/*-----------------------------------------------------------*/
+			{readon}
+				<a href="{READON_LINK}#JOSC_TOP" class="linkToComment">{READON_WRITE_COMMENT} ({READON_COUNT} {READON_COMMENTS})</a>
+			
+	{BLOCK-preview}
+			<div class='comment_preview_container' style='clear:both'>
+		{preview-lines}
+			</div>
+	{/BLOCK-preview}
+			{/readon}
+
+			{previewline}
+			<div class='comment_preview'>
+				<a href="{PREVIEW_LINK}#josc{id}">{PREVIEW_DATE}<b>{PREVIEW_TITLE}</b></a>
+			</div>
+			{/previewline}
+
+			{search}
+			<form name='joomlacommentsearch' id='joomlacommentsearch' method='post'>
+				<a name='SearchForm'></a>
+				{_HIDDEN_VALUES}
+				<fieldset>
+					<legend>{_JOOMLACOMMENT_SEARCH}</legend>
+					<div>
+						<label for="serch">{_JOOMLACOMMENT_PROMPT_KEYWORD}</label>
+						<input name='tsearch' type='text' class='inputbox' size='40' />
+						<input name='bsearch' type='button' class='button' value='{_JOOMLACOMMENT_SEARCH}' onclick='JOSC_search()' />
+					</div>
+					<div>
+						<input type='radio' name='rsearchphrase' onClick='JOSC_rsearchphrase_selection="any"' checked='checked' />{_JOOMLACOMMENT_SEARCH_ANYWORDS}
+						<input type='radio' name='rsearchphrase' onClick='JOSC_rsearchphrase_selection="all"' />{_JOOMLACOMMENT_SEARCH_ALLWORDS}
+						<input type='radio' name='rsearchphrase' onClick='JOSC_rsearchphrase_selection="exact"' />{_JOOMLACOMMENT_SEARCH_PHRASE}
+
+					</div>
+				</fieldset>
+				<div style='margin-bottom: 5px;'></div>
+			</form>
+			{/search}
+
+			{searchresults}
+			<div id='SearchResults'>
+				<a name='SearchResults'></a>
+				<ul>
+					<li>
+						{resulttitle}
+					</li>
+					{searchresult}
+					<li class='post'>
+						<div class='posthead'>
+							<span class='postinfo'>
+								{date}
+							</span>
+							<span class='comment_by'>
+								{title} {_JOOMLACOMMENT_BY} {name}
+							</span>
+						</div>
+						<div class='postcontent'>
+							<a  href='{address}'>{preview}</a>
+						</div>
+						{/searchresult}
+					</li>
+				</ul>
+				<div style='margin-bottom: 5px;'></div>
+			</div>
+			{/searchresults}
+
+			/*-----------------------------------------------------------------------*/
+			/*--  everything (!) inside body /body are taken in account  ---------*/
+			/*-----------------------------------------------------------------------*/
+			{body}
+			<div class='josc_clear'></div>
+			{ads}
+			<!-- ads will be displayed here -->
+			{/ads}
+
+			<a name='JOSC_TOP'></a>
+
+			<span id='JOSC_busypage'></span>
+			{pagenav}
+			<!-- here will be inserted the page nav -->
+			{/pagenav}
+
+	{library}
+			<script type="text/javascript" src="components/com_comment/joscomment/templates/magazineJoomla/js/custom.js"></script>
+			{/library}
+			{form}
+			<form name='joomlacommentform' id='joomlacommentform' method='post' action='{self}'>
+				<a name='CommentForm'></a>
+				<h3 id="CommentFormTitle">Leave a comment</h3>
+				<p>Make sure you enter the (*) required information where indicated.</p>
+				<div>
+					<label for='tcomment'>{_MESSAGE} *</label>
+					<textarea name='tcomment' id='tcomment' cols='{formareacols}' tabindex="1" rows='10' onblur="if(this.value=='') this.value='enter your message here...';" onfocus="if(this.value=='enter your message here...') this.value='';">enter your message here...</textarea>
+					{BLOCK-_UBBCode}
+					<div id='ubbcontainer'>
+							{UBBCodeButtons}
+							{UBBCodeSelect}
+					</div>
+					{/BLOCK-_UBBCode}
+				</div>
+
+				<label for='tname'>Name *</label>
+				<input name='tname' id="tname" type='text' value='{username}' tabindex="2"  onblur="if(this.value=='') this.value='enter your name...';" onfocus="if(this.value=='enter your name...') this.value='';" {registered_readonly}/>
+
+				{BLOCK-_ENTEREMAIL}
+					   <label for='temail'>E-mail *</label>
+				<input name='temail' id="temail" type='text' value='{email}' tabindex="3" onblur="if(this.value=='') this.value='enter your e-mail address...';" onfocus="if(this.value=='enter your e-mail address...') this.value='';" {registered_readonly}/>
+						   {notifyselect}
+				{/BLOCK-_ENTEREMAIL}
+					   <div class='josc_clear'></div>
+				{BLOCK-_ENTERWEBSITE}
+				<label for='twebsite'>Website URL</label>
+				<input name='twebsite' id="twebsite" type='text' tabindex="4" value='{website}' onblur="if(this.value=='') this.value='enter your site URL...';" onfocus="if(this.value=='enter your site URL...') this.value='';"/>
+				{/BLOCK-_ENTERWEBSITE}
+
+
+
+				{BLOCK-_CAPTCHATXT}
+				<label>Enter the two words you see below</label>
+					{security_image}
+					{/security_image}
+				{/BLOCK-_CAPTCHATXT}
+				<div class='josc_clear'></div>
+
+				{_HIDDEN_VALUES}
+				<input name='ttitle' id="ttitle" type='hidden' value="" />
+				<input type='button' class='button' tabindex="7" name='bsend' value='Submit comment' onclick='JOSC_editPost(-1,-1)' />
+				<div id='JOSC_busy'></div>
+			</form>
+			{/form}
+
+
+			<h3 id="comments_info">
+				Comments ({NUMBER_OF_COMMENTS})
+				<span id='JOSC_busypage'></span>
+			</h3>
+
+			{post}
+			<ul id='post{id}' style='margin-left:{wrapnum};' class='{published}'>
+				<li class='post'>
+					<a name='josc{id}'></a>
+					{BLOCK-avatar_picture}{avatar_picture}{/BLOCK-avatar_picture}
+					<div class='posthead'>
+
+						{voting}
+
+
+						<div class='comment_info'>
+							{username}
+							<div class='josc_clear'></div>
+
+							<span class='postdate'>{date}</span>
+						</div>
+				{BLOCK-website}{website}{/BLOCK-website}
+						<div class='josc_clear'></div>
+					</div>
+					<div class='postcontent'>
+						{content}
+					</div>
+					{BLOCK-footer}
+					<div class='postfooter'>
+
+						<span>
+							{editbuttons}
+						</span>
+					</div>
+					{/BLOCK-footer}
+					<div class='josc_clear'></div>
+				</li>
+			</ul>
+			{/post}
+
+
+			{poweredby}
+			<!-- powered by will be inserted here.
+	 to hide, please do not delete. Just set in css #poweredby { display:none; }
+			-->
+			{/poweredby}
+			<!-- <div class="backbutton" align="center">
+		<a href="javascript:JOSC_goToAnchor('JOSC_TOP');">^^^</a>
+			</div> -->
+			{/body}
+
+			<!-- >>> html code below is just to allow preview of template -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+System Requirements:
+joomlacomment 4.0 beta2
+jomtube 1.0.8 Beta
+PHP5
+MYSQL5
+
+Installation steps:
+1. upload com_jomtube to administrator/components/com_comment/plugin
+2. go to components/com_jomtube/views/video/tmpl/default.php and add this code just
+before this line <?php if ($this->c->allow_comment):?> (at around line 293):
+<div class="jomtube_comments" style="width:<?php echo $this->c->video_player_width;?>px;">
+        <?php
+		require_once(JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_comment' . DS . 'plugin' . DS . 'com_jomtube' . DS . 'josc_com_jomtube.php');
+	?>
+</div>
+
+3. Go to joomlacomment's backend -> other component settings -> new from the dropdown list on
+the right select com_jomtube -> click save
+
+
+Use with the latest comment module:
+go to modules/mod_comment/mod_comment.xml find
+<param name="component" type="list" default="" label="Component" description="Will display comments of the specified component.">
+
+and add a new option like this:
+<option value="com_jomtube">com_jomtube</option>
+
+Now the latest comment from jomtube should show in the module.
+
+This is all. If you have any problems don't hesitate to use the forum at
+http://compojoom.com/forum/39-jomtube

@@ -1,0 +1,294 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/css.css" type="text/css" />
+</head>
+<body>
+<div id="comment">
+<!-- <<< html code above is just to allow preview of template -->
+
+JOOMLACOMMENT TEMPLATE : default-emotop
+
+/*-----------------------------------------------------------*/
+/*--  only {xxx}{/xxx} blocks are taken in account  ---------*/
+/*-----------------------------------------------------------*/
+{readon}
+	<div class='write_comment'>
+		<a href="{READON_LINK}#JOSC_TOP" class="readon">{READON_WRITE_COMMENT} ({READON_COUNT} {READON_COMMENTS})</a>
+	</div>
+	{BLOCK-preview}
+	<div class='comment_preview_container' style='clear:both'>
+		{preview-lines}
+	</div>
+	{/BLOCK-preview}
+{/readon}
+
+{previewline}
+	<div class='comment_preview'>
+    	<a href="{PREVIEW_LINK}#josc{id}">{PREVIEW_DATE}<b>{PREVIEW_TITLE}</b></a>
+	</div>
+{/previewline}
+
+{search}
+<form name='joomlacommentsearch' id='joomlacommentsearch' method='post'>
+  <a name='SearchForm'></a>
+  {_HIDDEN_VALUES}
+  <fieldset>
+      <legend>{_JOOMLACOMMENT_SEARCH}</legend>
+      <div>
+      <label for="serch">{_JOOMLACOMMENT_PROMPT_KEYWORD}</label>
+      <input name='tsearch' type='text' class='inputbox' size='40' />
+      <input name='bsearch' type='button' class='button' value='{_JOOMLACOMMENT_SEARCH}' onclick='JOSC_search()' />
+      </div>
+      <div>
+        <input type='radio' name='rsearchphrase' onClick='JOSC_rsearchphrase_selection="any"' checked='checked' />{_JOOMLACOMMENT_SEARCH_ANYWORDS}
+        <input type='radio' name='rsearchphrase' onClick='JOSC_rsearchphrase_selection="all"' />{_JOOMLACOMMENT_SEARCH_ALLWORDS}
+        <input type='radio' name='rsearchphrase' onClick='JOSC_rsearchphrase_selection="exact"' />{_JOOMLACOMMENT_SEARCH_PHRASE}
+
+      </div>
+  </fieldset>
+  <div style='margin-bottom: 5px;'></div>
+</form>
+{/search}
+
+{searchresults}
+<div id='SearchResults'>
+    <a name='SearchResults'></a>
+    <ul>
+        <li>
+            {resulttitle}
+        </li>
+        {searchresult}
+        <li class='post'>
+            <div class='posthead'>
+                <span class='postinfo'>
+                    {date}
+                </span>
+                <span class='comment_by'>
+                    {title} {_JOOMLACOMMENT_BY} {name}
+                </span>
+            </div>
+            <div class='postcontent'>
+                <a  href='{address}'>{preview}</a>
+            </div>
+            {/searchresult}
+        </li>
+    </ul>
+    <div style='margin-bottom: 5px;'></div>
+</div>
+{/searchresults}
+
+/*-----------------------------------------------------------------------*/
+/*--  everything (!) inside body /body are taken in account  ---------*/
+/*-----------------------------------------------------------------------*/
+{body}
+<div class="josc_clear"></div>
+{ads}
+<!-- ads will be displayed here -->
+{/ads}
+
+<a name='JOSC_TOP'></a>
+{menu}
+<div id='CommentMenu'>
+     <div class='josc_buttons'>
+	 <ul>
+	     {BLOCK-add_new}
+		<li>
+		<a id='JOOMLACOMMENT_ADDNEW' onclick='javascript:{BUTTON_ADDNEW_js}' title='{_JOOMLACOMMENT_ADDNEW}'>{_JOOMLACOMMENT_ADDNEW}</a>
+		</li>
+		{/BLOCK-add_new}
+		{BLOCK-delete_all}
+		<li>
+		<a id='JOOMLACOMMENT_DELETEALL' onclick='javascript:{BUTTON_DELETEALL_js}' title='{_JOOMLACOMMENT_DELETEALL}'>{_JOOMLACOMMENT_DELETEALL}</a>
+		</li>
+		{/BLOCK-delete_all}
+		{BLOCK-search}
+		<li>
+		<a id='JOOMLACOMMENT_SEARCH' onclick='javascript:{BUTTON_SEARCH_js}' title='{_JOOMLACOMMENT_SEARCH}'>{_JOOMLACOMMENT_SEARCH}</a>
+		</li>
+		{/BLOCK-search}
+		{BLOCK-rss}
+		<li>
+			<a id='JOOMLACOMMENT_RSS' href='{BUTTON_RSS_URL}' title='{_JOOMLACOMMENT_RSS}'>{_JOOMLACOMMENT_RSS}</a>
+		</li>
+		{/BLOCK-rss}
+
+	 </ul>
+
+    </div>
+    <div id="comments_info">
+        {_JOOMLACOMMENT_COMMENTS_TITLE} ({NUMBER_OF_COMMENTS})
+        <span id='JOSC_busypage'></span>
+    </div>
+
+</div>
+<div class="josc_clear"></div>
+{/menu}
+
+{form}
+
+<form name='joomlacommentform' id='joomlacommentform' method='post' action='{self}'>
+    <a name='CommentForm'></a>
+    <fieldset>
+        <legend id='CommentFormTitle'>
+			<a id='JOSCMTstretchertoogleFORM' href='javascript:void(null)'>
+				<img src='{template_live_site}/images/new.png' alt="+/-" /> {_WRITECOMMENT}</a>
+		</legend>
+		<div id='JOSCMTtexttoogle'>
+        <fieldset>
+            <legend>{_YOUR_CONTACT_DETAILS}:</legend>
+            <div>
+                <label for='tname'>{_ENTERNAME}</label>
+                <input name='tname' id="tname" type='text' value='{username}' tabindex="1" {registered_readonly}/>
+                   </div>
+            {BLOCK-_ENTEREMAIL}
+            <div>
+                <label for='temail'>{_ENTEREMAIL}</label>
+                <input name='temail' id="temail" type='text' value='{email}' tabindex="2" {registered_readonly}/>
+                {notifyselect}
+				<span id='gravatar'>{gravatar}</span>
+            </div>
+            {/BLOCK-_ENTEREMAIL}
+            {BLOCK-_ENTERWEBSITE}
+            <div>
+                <label for='twebsite'>{_ENTERWEBSITE}</label>
+                <input name='twebsite' id="twebsite" type='text' tabindex="3" value='{website}'/>
+            </div>
+            {/BLOCK-_ENTERWEBSITE}
+        </fieldset>
+        <fieldset>
+            <legend>{_COMMENT}:</legend>
+            <div>
+                <label for='ttitle'>{_ENTERTITLE}</label>
+                <input name='ttitle' id="ttitle" type='text' tabindex="4" />
+            </div>
+            {BLOCK-_UBBCode}
+            <div id='ubbcontainer'>
+                <label>{_UBBCODE}</label>
+                {UBBCodeButtons}
+                {UBBCodeSelect}
+            </div>
+            {/BLOCK-_UBBCode}
+            {BLOCK-emoticons}
+            <div id='emoticons'>
+                 {emoticons}
+            </div>
+            {/BLOCK-emoticons}
+            <div>
+                <label for='tcomment'>{_MESSAGE}:</label>
+                <textarea name='tcomment' id='tcomment' cols='{formareacols}' tabindex="5" rows='10'></textarea>
+            </div>
+        </fieldset>
+        {BLOCK-_CAPTCHATXT}
+        <fieldset>
+            <legend>{_SECURITY}</legend>
+            <div id='security'>
+                {security_image}
+                {/security_image}
+                {security_input}
+            </div>
+            <div class="josc_clear"></div>
+            {_CAPTCHATXT}
+        </fieldset>
+        {/BLOCK-_CAPTCHATXT}
+        {_HIDDEN_VALUES}
+        <input type='button' class='button' tabindex="7" name='bsend' value='{_SENDFORM}' onclick='JOSC_editPost(-1,-1)' />
+        <div id='JOSC_busy'></div>
+		</div>
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+var JOSCmySlide = new Fx.Slide('JOSCMTtexttoogle');
+document.getElementById('JOSCMTstretchertoogleFORM').addEvent('click', function(e){
+	e = new Event(e);
+	JOSCmySlide.toggle();
+	e.stop();
+});
+	function JOSC_afterAjaxResponse(action) {
+		switch(action) {
+			case 'show':
+			case 'response_reply':
+			case 'response_edit':
+			case 'response_quote':
+				JOSCmySlide.show();
+				return 0;
+				break;
+
+			case 'hide':
+			case 'response_editpost':
+			case 'response_posted':
+			case 'response_approval':
+    			JOSCmySlide.hide();
+				return 0;
+				break;
+/* because of bug with IE ...(?)
+			case 'response_searchform':
+			case 'response_getcomments':
+				JOSCmySlide.show();
+                JOSCmySlide.hide();
+				return 0;
+                break;
+*/
+			default:
+				return 0;
+		}
+	}
+	if (window.document.URL.indexOf("#CommentForm")<0) {
+           if (JOSC_is_ie) window.onload = function(){JOSC_afterAjaxResponse("hide");}
+           else JOSC_afterAjaxResponse("hide");
+    }
+</script>
+{/form}
+
+<span id='JOSC_busypage'></span>
+{pagenav}
+<!-- here will be inserted the page nav -->
+{/pagenav}
+
+
+{post}
+<ul id='post{id}' style='margin-left:{wrapnum};'>
+    <li class='post'>
+        <a name='josc{id}'></a>
+        <div class='posthead'>
+            <span class='postinfo'>
+                <span class='postdate'>{date}</span>
+                {BLOCK-website}{website}|{/BLOCK-website}
+				{notify}
+            	{BLOCK-usertype}|<span class='postusertype'>{usertype}</span>{/BLOCK-usertype}|
+            </span>
+                {username}
+            {BLOCK-title}&nbsp;-&nbsp;<span class='posttitle'>{title}</span>{/BLOCK-title}
+        </div>
+        <div class='postcontent'>
+            {BLOCK-avatar_picture}{avatar_picture}{/BLOCK-avatar_picture}<div class='comment_content'>{content}</div>
+        </div>
+        {BLOCK-footer}
+        <div class='postfooter'>
+            {voting}
+                <span>
+                    {editbuttons}
+				</span>
+        </div>
+        {/BLOCK-footer}
+        <div class="josc_clear"></div>
+    </li>
+</ul>
+{/post}
+
+
+
+{poweredby}
+<!-- powered by will be inserted here.
+	 to hide, please do not delete. Just set in css #poweredby { display:none; }
+  -->
+{/poweredby}
+<!-- <div class="backbutton" align="center">
+		<a href="javascript:JOSC_goToAnchor('JOSC_TOP');">^^^</a>
+</div> -->
+{/body}
+
+<!-- >>> html code below is just to allow preview of template -->
+</div>
+</body>
+</html>

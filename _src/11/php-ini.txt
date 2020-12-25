@@ -1,0 +1,7 @@
+register_globals = off (or = 0) (this function GONE in php 5.3.0 and later so no worries.)
+allow_url_fopen = 0
+allow_url_include = 0
+define(‘RG_EMULATION’, 0) 
+expose_php =off  (this suppresses error messages)
+magic_quotes_gpc = off (or =0)
+magic_quotes_runtime = off (or =0)

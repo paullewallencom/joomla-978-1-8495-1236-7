@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5" method="upgrade">
+	<name>comment</name>
+	<author>Compojoom.com</author>
+	<creationDate>June 2010</creationDate>
+	<copyright>Copyright(C) Compojoom.com All rights reserved!</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>services@compojoom.com</authorEmail>
+	<authorUrl>www.compojoom.com</authorUrl>
+	<version>4.1.7 stable</version>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+		</sql>
+	</install>
+	<administration>
+		<menu img="../components/com_comment/joscomment/images/logoicon.png">Compojoom Comment</menu>
+		<submenu>
+			<menu view="comments" img="../includes/js/ThemeOffice/edit.png">Manage Comments</menu>
+			<menu view="settings" img="../includes/js/ThemeOffice/config.png">Settings</menu>
+			<menu view="import" img="../includes/js/ThemeOffice/controlpanel.png">Import</menu>
+			<menu view="maintenance" img="../includes/js/ThemeOffice/sysinfo.png">Maintenance</menu>
+			<menu view="about" img="../includes/js/ThemeOffice/credits.png">About</menu>
+		</submenu>
+		<languages folder="language">
+			<language tag="ar-DZ">ar-DZ/ar-DZ.com_comment.ini</language>
+			<language tag="bg-BG">bg-BG/bg-BG.com_comment.ini</language>
+			<language tag="ca-ES">ca-ES/ca-ES.com_comment.ini</language>
+			<language tag="cs-CZ">cs-CZ/cs-CZ.com_comment.ini</language>
+			<language tag="da-DK">da-DK/da-DK.com_comment.ini</language>
+			<language tag="de-DE">de-DE/de-DE.com_comment.ini</language>
+			<language tag="el-GR">el-GR/el-GR.com_comment.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_comment.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_comment.ini</language>
+			<language tag="et-EE">et-EE/et-EE.com_comment.ini</language>
+			<language tag="fr-FR">fr-FR/fr-FR.com_comment.ini</language>
+			<language tag="he-IL">he-IL/he-IL.com_comment.ini</language>
+			<language tag="hr-HR">hr-HR/hr-HR.com_comment.ini</language>
+			<language tag="hu-HU">hu-HU/hu-HU.com_comment.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_comment.ini</language>
+			<language tag="ja-JP">ja-JP/ja-JP.com_comment.ini</language>
+			<language tag="ko-KR">ko-KR/ko-KR.com_comment.ini</language>
+			<language tag="lt-LT">lt-LT/lt-LT.com_comment.ini</language>
+			<language tag="lv-LV">lv-LV/lv-LV.com_comment.ini</language>
+			<language tag="mk-MK">mk-MK/mk-MK.com_comment.ini</language>
+			<language tag="mn-MN">mn-MN/mn-MN.com_comment.ini</language>
+			<language tag="ms-MY">ms-MY/ms-MY.com_comment.ini</language>
+			<language tag="nb-NO">nb-NO/nb-NO.com_comment.ini</language>
+			<language tag="nl-NL">nl-NL/nl-NL.com_comment.ini</language>
+			<language tag="pl-PL">pl-PL/pl-PL.com_comment.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_comment.ini</language>
+			<language tag="ro-RO">ro-RO/ro-RO.com_comment.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_comment.ini</language>
+			<language tag="sl-SL">sl-SL/sl-SL.com_comment.ini</language>
+			<language tag="sr-RS">sr-RS/sr-RS.com_comment.ini</language>
+			<language tag="sv-SE">sv-SE/sv-SE.com_comment.ini</language>
+			<language tag="tr-TR">tr-TR/tr-TR.com_comment.ini</language>
+			<language tag="uk-UA">uk-UA/uk-UA.com_comment.ini</language>
+			<language tag="uz-UZ">uz-UZ/uz-UZ.com_comment.ini</language>
+			<language tag="vi-VN">vi-VN/vi-VN.com_comment.ini</language>
+			<language tag="zh-CN">zh-CN/zh-CN.com_comment.ini</language>
+			<language tag="zh-TW">zh-TW/zh-TW.com_comment.ini</language>
+		</languages>
+		<files folder="administrator/components/com_comment">
+			<filename>admin_images/index.html</filename>
+			<filename>admin_images/delete.png</filename>
+
+			<!-- Assets begin-->
+			<folder>assets</folder>
+			<!-- Assets end -->
+
+			<!-- Controllers begin-->
+			<folder>controllers</folder>
+			<!-- controllers end-->
+
+			<!-- Library begin-->
+			<folder>library</folder>
+			<!-- Library end-->
+
+			<!-- Models begin -->
+			<folder>models</folder>
+			<!-- Models end -->
+
+			<!-- Plugin begin -->
+			<folder>plugin</folder>
+			<!-- Plugin end -->
+
+			<!-- SQL begin -->
+			<folder>sql</folder>
+			<!-- SQL end -->
+
+			<!-- tables begin -->
+			<folder>tables</folder>
+			<!-- tables end -->
+
+			<!-- views begin -->
+			<folder>views</folder>
+			<!-- views end -->
+		</files>
+		<files>
+			<filename>admin.comment.php</filename>
+			<filename>changelog.txt</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>install.comment.php</filename>
+			<filename>uninstall.comment.php</filename>
+		</files>
+	</administration>
+
+	<languages folder="language">
+		<language tag="ar-DZ">ar-DZ/ar-DZ.com_comment.ini</language>
+		<language tag="bg-BG">bg-BG/bg-BG.com_comment.ini</language>
+		<language tag="ca-ES">ca-ES/ca-ES.com_comment.ini</language>
+		<language tag="cs-CZ">cs-CZ/cs-CZ.com_comment.ini</language>
+		<language tag="da-DK">da-DK/da-DK.com_comment.ini</language>
+		<language tag="de-DE">de-DE/de-DE.com_comment.ini</language>
+		<language tag="el-GR">el-GR/el-GR.com_comment.ini</language>
+		<language tag="en-GB">en-GB/en-GB.com_comment.ini</language>
+		<language tag="es-ES">es-ES/es-ES.com_comment.ini</language>
+		<language tag="et-EE">et-EE/et-EE.com_comment.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.com_comment.ini</language>
+		<language tag="he-IL">he-IL/he-IL.com_comment.ini</language>
+		<language tag="hr-HR">hr-HR/hr-HR.com_comment.ini</language>
+		<language tag="hu-HU">hu-HU/hu-HU.com_comment.ini</language>
+		<language tag="it-IT">it-IT/it-IT.com_comment.ini</language>
+		<language tag="ja-JP">ja-JP/ja-JP.com_comment.ini</language>
+		<language tag="ko-KR">ko-KR/ko-KR.com_comment.ini</language>
+		<language tag="lt-LT">lt-LT/lt-LT.com_comment.ini</language>
+		<language tag="lv-LV">lv-LV/lv-LV.com_comment.ini</language>
+		<language tag="mk-MK">mk-MK/mk-MK.com_comment.ini</language>
+		<language tag="mn-MN">mn-MN/mn-MN.com_comment.ini</language>
+		<language tag="ms-MY">ms-MY/ms-MY.com_comment.ini</language>
+		<language tag="nb-NO">nb-NO/nb-NO.com_comment.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.com_comment.ini</language>
+		<language tag="pl-PL">pl-PL/pl-PL.com_comment.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.com_comment.ini</language>
+		<language tag="ro-RO">ro-RO/ro-RO.com_comment.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.com_comment.ini</language>
+		<language tag="sl-SL">sl-SL/sl-SL.com_comment.ini</language>
+		<language tag="sr-RS">sr-RS/sr-RS.com_comment.ini</language>
+		<language tag="sv-SE">sv-SE/sv-SE.com_comment.ini</language>
+		<language tag="tr-TR">tr-TR/tr-TR.com_comment.ini</language>
+		<language tag="uk-UA">uk-UA/uk-UA.com_comment.ini</language>
+		<language tag="uz-UZ">uz-UZ/uz-UZ.com_comment.ini</language>
+		<language tag="vi-VN">vi-VN/vi-VN.com_comment.ini</language>
+		<language tag="zh-CN">zh-CN/zh-CN.com_comment.ini</language>
+		<language tag="zh-TW">zh-TW/zh-TW.com_comment.ini</language>
+	</languages>
+
+	<!-- Plugin begin -->
+	<folder>plugin</folder>
+	<!-- Plugin end -->
+
+	<files folder="components/com_comment">
+		<!-- assets begin -->
+		<folder>assets</folder>
+		<!-- assets end -->
+
+		<!-- classes begin -->
+		<folder>classes</folder>
+		<!-- classes end -->
+
+		<!-- includes begin -->
+		<folder>includes</folder>
+		<!-- includes end -->
+
+		<!-- joscomment begin-->
+		<folder>joscomment</folder>
+		<!-- joscomment end -->
+
+		<filename>comment.php</filename>
+		<filename>index.html</filename>
+		<filename>jomsocial_rule.xml</filename>
+	</files>
+	<installfile>install.comment.php</installfile>
+	<uninstallfile>uninstall.comment.php</uninstallfile>
+</install>

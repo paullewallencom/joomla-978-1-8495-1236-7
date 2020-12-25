@@ -1,0 +1,391 @@
+/*styling the comment form */
+#joomlacommentsearch fieldset,
+#joomlacommentform fieldset {
+    margin: 0 0 0.5em 0;
+    padding: 0.5em;
+    border: solid 1px #CCCCCC;
+    background: #FFEFEF;
+}
+
+#comment form#joomlacommentform fieldset fieldset div a {
+    background: none;
+}
+
+#joomlacommentform {
+    text-align: left;
+}
+#joomlacommentform legend {
+    font-weight: bold;
+}
+#joomlacommentform fieldset fieldset legend {
+    font-weight: bold;
+    color: #999999;
+    font-size: 1em;
+}
+#joomlacommentform fieldset legend#CommentFormTitle {
+    color: #000000;
+    background: #FFEFEF;
+    font-size: 1.2em;
+}
+#joomlacommentform label {
+    float: left;
+    width: 8em;
+    font-weight:bold;
+    color: #000;
+    margin: 0;
+}
+
+#joomlacommentform input {
+    width: 270px;
+    border: 1px solid #CCCCCC;
+}
+#joomlacommentform input#temail {
+    width: 160px;
+}
+#joomlacommentform input#ttitle {
+    width: 328px;
+}
+#joomlacommentform input#security_try {
+    float: left;
+    width: 100px;
+    margin-top: 3px;
+}
+#joomlacommentform textarea {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #CCCCCC;
+}
+
+#joomlacommentform input.button,
+#joomlacommentform input.button:hover,
+#joomlacommentform input.button:focus {
+    width: 50px;
+}
+div#captcha {
+    float: left;
+}
+div#security {
+    width: 220px;
+}
+
+#joomlacommentform input:focus,
+#joomlacommentform textarea:focus {
+    background: #FFFFCC;
+    border: 1px #FFC45F dotted;
+}
+
+#joomlacommentform div {
+    margin: 2px;
+}
+
+#emoticons {
+    padding-left: 8em;
+}
+.emoticon {
+    padding: 2px 1px;
+}
+
+/* Voting section */
+#comment ul.voting {
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+}
+#comment ul.voting li {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    background: none;
+}
+#comment div.voting_yes, #comment div.voting_yes:visited {
+    color: #3C922F;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    background: url(../images/voting_yes.png) #EEF9EB no-repeat;
+    border: 1px outset #3CB22F;
+    padding: 2px 4px 2px 20px;
+    white-space: nowrap;
+    float: left;
+    line-height: 10px;
+    text-decoration: none;
+    cursor:pointer;
+}
+#comment div.voting_yes:hover {
+    font-weight: bold;
+    background-color: white;
+}
+#comment div.voting_no, #comment div.voting_no:visited {
+    color: #AE3738;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    background: url(../images/voting_no.png) #F9EBEB no-repeat;
+    border: 1px outset #AE3738;
+    padding: 2px 4px 2px 20px;
+    white-space: nowrap;
+    float: left;
+    line-height: 10px;
+    text-decoration: none;
+    cursor:pointer;
+}
+#comment div.voting_no:hover {
+    font-weight: bold;
+    background-color: white;
+}
+
+/* Menu */
+div#comment ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.josc_clear {
+    clear:both;
+}
+
+/* comment boxes */
+#comment #Comments ul {
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0px;
+    padding: 0px;
+}
+
+#comment #SearchResults ul li.post,
+#Comments ul li.post {
+    border: 1px solid #E85E03;
+    margin: 5px 0px;
+    padding: 0px;
+    background: #FFEFEF;
+}
+
+#comment #SearchResults .postinfo,
+#Comments .postinfo {
+    float: right;
+    color:#FFFFFF;
+    font-size:0.9em;
+    font-weight:normal;
+    vertical-align:top;
+}
+#Comments ul li.post div.postfooter {
+	border-top: 1px dotted #BBB;
+    padding: 2px 5px;
+    clear:both;
+    color: #000000;
+}
+#Comments ul li.post div.postfooter span a {
+    color: #E85E03;
+	font-weight:bold;
+    font-size:0.9em;
+    text-decoration: none;
+    padding-right: 5px;
+    margin-right: 5px;
+    border-right: 1px solid #CCC;
+}
+#Comments ul li.post div.postfooter span a:hover,
+#Comments ul li.post div.postfooter span a:focus {
+    color: #E85E03;
+    background: none;
+    text-decoration: underline;
+}
+#comment #SearchResults ul li.post div.posthead,
+#Comments ul li.post div.posthead {
+	padding: 1px 0 2px 0;
+    color: #FFFFFF;
+    background: transparent url(../images/red/headred.png) repeat scroll 0 0;
+    vertical-align: middle;
+}
+#comment #SearchResults ul li.post div.postcontent,
+#Comments ul li.post div.postcontent {
+    color: #505367;
+    background: transparent url(../images/body2.png) repeat-x scroll 0 0;
+    padding: 5px;
+}
+#comment .comment_content {
+    margin-bottom: 5px;
+    text-align: justify;
+	display: table;
+}
+#comment .comment_content p {
+	margin-top: 0;
+	padding-top: 0;
+}
+#comment #SearchResults ul li.post span.comment_by {
+    padding-left: 5px;
+}
+#Comments ul li.post div.posthead  span.username {
+    background: url(../images/user.png) no-repeat 2px 1px;
+    padding-left: 21px;
+}
+#Comments ul li.post div.posthead  a.username {
+    color: #FFFFFF;
+    background: url(../images/user.png) no-repeat 2px 1px;
+    padding-left: 21px;
+}
+#Comments ul li.post div.posthead span.postinfo .postnotify0 {
+    background-image:url(../images/mailred.png);
+    background-position: 2px 2px;
+    background-repeat:no-repeat;
+    padding-left:16px;
+    padding-right: 5px;
+}
+#Comments ul li.post div.posthead span.postinfo .postnotify1 {
+    background-image: url(../images/mailgreen.png);
+    background-position: 2px 2px;
+    background-repeat:no-repeat;
+    padding-left:16px;
+    padding-right: 5px;
+}
+#Comments .postdate {
+    padding: 0 5px;
+    float:right;
+}
+
+/* Navigation */
+#comment #joscPageNav {
+    text-align:center;
+    padding: 2px;
+}
+#comment #joscPageNav #joscPageNavNoLink,
+#comment #joscPageNav #joscPageNavLink {
+    text-align:center;
+}
+
+#comment #joscPageNav a {
+    color: #135CAE;
+    text-decoration: none;
+}
+#comment #joscPageNav a:hover,
+#comment #joscPageNav a:focus {
+    color: #0B3768;
+    background: none;
+    text-decoration: underline;
+}
+#JOSC_busypage {
+    float: left;
+}
+
+/* quote*/
+#comment .quote {
+	text-align: center;
+	margin-bottom: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+#comment .genmed {
+	color: #505367;
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 1px;
+}
+#comment .quotebody {
+	color: #505367;
+	border: 1px #CCCCCC solid;
+	background: white;
+	text-align: justify;
+	padding: 8px;
+}
+#comment .code .genmed{
+	padding-left: 29px;
+}
+
+#comment .josc_ads {
+    text-align: center;
+}
+
+/* comment avatar */
+div#comment img.avatar {
+    float: left;
+    padding: 0px 10px 8px 0px;
+}
+.comment_preview_container {
+	border: 1px #677791 solid;
+	margin: 8px;
+}
+.comment_preview {
+	padding: 4px;
+	text-align: left;
+	border: 1px #CCCCCC solid;
+	font-size: 0.9em;
+	background-color: #F5F5F5;
+	cursor: pointer;
+}
+
+#comment .hide {
+    color: #AAAAAA;
+    display: inline;
+}
+
+#comment .postemoticon {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+#comment #joomlacommentform img {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+#comment .postusertype {
+    padding: 2px 2px 0 2px;
+}
+#comment div#CommentMenu {
+    margin: 0px;
+    padding: 0px;
+    background: url(../images/red/sectiontableheaderred.png);
+    border: 1px solid #E85E03;
+    color: #FFFFFF;
+    font-weight: bold;
+	height: 20px;
+    color: #FFFFFF;
+    line-height:20px;
+}
+
+#comment div.josc_buttons {
+    float: right;
+}
+#comment div#comments_info {
+    float: left;
+    padding-left: 5px;
+}
+
+#comment div.josc_buttons ul li {
+    display: block;
+    background: none;
+    float:left;
+    border-left: 1px solid #E85E03;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+#comment div.josc_buttons ul li a {
+    text-decoration: none;
+    padding: 5px 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#comment div.josc_buttons ul li a:hover {
+    background: #E85E03;
+}
+
+/*website*/
+#comment a.postwebsite:link,
+#comment a.postwebsite:visited,
+#comment a.postwebsite:hover {
+    background: transparent url(../images/html.png) no-repeat scroll 0 0;
+    padding: 0 0 0 17px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+div#poweredby.small {
+    text-align: center;
+}

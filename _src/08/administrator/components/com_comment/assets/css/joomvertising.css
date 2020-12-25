@@ -1,0 +1,70 @@
+#website {
+    width: 200px;
+}
+#email {
+    width: 200px;
+}
+#name {
+    width: 200px;
+}
+#country {
+    width: 200px;
+}
+#paypal {
+    width: 200px;
+}
+#category {
+    width: 200px;
+}
+#impressions {
+    width: 200px;
+}
+#visitors {
+    width: 200px;
+}
+.info {
+    color: red;
+}
+#adminForm  TEXTAREA#address{
+    width: 200px;
+    min-height: 100px;
+}
+#adminForm label {
+    float: left;
+    width: 130px;
+    font-weight: bold;
+    display:block;
+}
+#adminForm fieldset {
+    width: 600px;
+}
+#adminForm fieldset fieldset{
+    width: 590px;
+}
+#adminForm TEXTAREA {
+    width: 400px;
+    min-height: 200px;
+}
+
+.ads_info {
+    width: 500px;
+}
+
+.help {
+    color: #9F9F9F;
+}
+
+.clear {
+    clear:both;
+}
+
+.logo {
+    width: 400px;
+    text-align: center;
+
+}
+
+.caption {
+    text-align: center;
+    font-weight: bold;
+}

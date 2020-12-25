@@ -1,0 +1,205 @@
+************ 2010/07 : Compojoom comment v4.1.5 stable
+# fixed backend manage comments bugs in the com_sobi2 plugin
+# updated com_content plugin
+# missing license information in com_community plugin
+# fixed wrong SEF urls with sef components such as joomSEF or aceSEF
+# fixed problem with comments importing - http://compojoom.com/forum/25-compojoomcomment/47-bugs/9510-import-from-chronocomments
+# fresh install - wrong captcha code - dissapear after saving the configuration - thanks to Tom Canavan for reporting this
+# fixed wrong links created with the jphoto plugin
+# some fixes for php 5.3 compatability
+# updated docman's RSS function
+# updated adsmanager's RSS function
+# updated eventlists's RSS function
+# updated jomtube's RSS function
+# updated k2's RSS function
+# updated myblog's RSS function
+# updated puarcade's RSS function
+# updated sobi2's RSS function
+# updated virtuemart's RSS function
+# Fixed persistent XSS vulnerability
+# Fixed reflective XSS vulnerabitlity
+# Fixed LFI vulnerability
+# Fixed CSRF vulnerability
+
+
+************ 2010/06 : Compojoom comment v4.1.4 stable
+# manage comments was not redirecting to the right commponents after user actions such as, edit, delete, publish etc
+# some variables were defined twice
+^ improved import function
++ added support for JomSocial's avatars
+^ improvements on CB's avatar support (should be definetly faster on sites with a lot of registered users)
+# backend forms were missing form.token
+# RSS was not created for com_content
+# installation was producing a fatal error when system debug on + some other improvements
+^ instead of JRequest::getOption use 'com_k2' - if myblog is installed on the system it changes the $option and that produces wrong links to k2
+$ nl-NL language file updated - thanks to Kristof
+$ french language file updated - thanks to Kristof
+^ every tab from the configuration was moved to a separate file + defined('_JEXEC')... was missing from some files
++ added com_community plugin (JomSocial)
++ added onAfterCommentSave event
++ added onAfterCommentEdit event
++ added onAfterCommentDelete event
++ added onAfterCommentVote event
+# fixing some bugs in the modern template
++ added jomsocial_rule.xml file - needed for jomsocial activity features
+
+************ 2010/06 : Compojoom comment v4.1.3 stable
+# fixed: loading default config when there is no config for component was wrong
+# captcha is now loaded within the joomla framework
+# fixed wrong links for com_content in backend
+$ updated french language file
+# with some components there are items that don't have a title - now we will show "this item has no title" instead of nothing
+# fixed some php notices
++ hwdphotoshare plugin added
+# ninjamonials plugin updated
+# fixed - creating a config and clickin on apply was not redirecting to the created config
+# k2 plugin updated
+# fixed - wrong comment counter on pages (backend manage comments)
++ js validation for e-mail
+$ dummy plugin updated
+$ French language file updated - thanks to Zombla
+
+************ 2010/05 : Compojoom comment v4.1.2 stable
+$ Russian language file updated - thanks to Yuri
+$ Ukrainian language file update - thanks to Yuri
+$ com_k2 plugin updated
+# fixed wrong language label on Your customized template
++ Russian and Ukrainina language need specific handling when there are comments beetween 11 and 19 - thanks to Yuri
+# fixed wrong links when searching into com_content
+
+************ 2010/05 : Compojoom comment v4.1 RC1
+$ Norwegian language file updated thanks to Nils Ally
+$ fixed some misspeled words in the english language file - thanks to Nils Ally again and Yuri
+$ spanish translation updated - thanks to Juanje
+$ russian translation updated - thanks to Yuri
+$ french translation updated - thanks to Eric
+# fixed a problem with the rss link - no sense in using onclick
+# translation for 1 h ago etc was missing, now using JText::sprintf instead of only sprintf
++ ubbcode is now case insensitive
+# fixed wrong links in com_myblog when there is no itemid
+# in frontend the content plugin was making an unnecessary query to the database
+
+************ 2010/04 : Compojoom comment v4.1.2 beta1
+# fixed the sql install script was creating tables with prefix jos_
+
+************ 2010/04 : Compojoom comment v4.1.1 beta1
+# the install script was using only the jos_ table prefix
+# fixed links for the module (the com_content plugin)
+# updated several compojoomcomment plugins
+# , used in language file instead of =
+
+************ 2010/04 : Compojoom comment v4.1 Beta1
++ All legacy templates were updated
++ added span to the voting cell
++ added wordpress import pattern
++ added maintenance view - for the moment just shows the php, mysql and joomla versions
++ added adsmanager plugin
++ added hwdvideoshare plugin
++ added myblog plugin
++ added sobi2 plugin
++ added jphoto plugin
++ added jomtube plugin
++ added virtuemart plguin
++ added k2 plugin
++ added a plugin call in JOSC_visual (getComments()) function
+# fixed bug in quote and code bbcode replacement
+# fixed backend was sending wrong e-mail with wrong link to articles
+# fixed non existing variable length was used in backend.
+# fixed bug with wordwrap and -1 length setting in the configuration
+$ JoomlaComment renamed to Compojoom comment
+
+
+
+************ 2009/12 : !JoomlaComment v4.1 Alpha 2
++   New Smiley/Emoticon set - "SimpleSmileys" - a very light, clean yet elegant greyscale collection. 
+        100% Public Domain and Free to use with no licence at all - thanks Leo! http://simplesmileys.org/
++   Modern template redesigned (as modern2 for now)
++   ReCaptcha added
++   UBB code
+        + Strikethrough added
+        + URL will prepend http:// if a protocol (i.e. "://") is not found in selected/entered address
+            - Could be improved, if a protocol apart from http:// is selected correctly but is not four letters long 
+              (like http is) then it will still prepend a guessed http:// protocol
+        # URL is now auto-created in format [url={selected text}]here[/url] for shorter length and wordwrap compatibility
+$   Many typo and spelling corrections in markup and internal code, improvements with W3C code validity
+#   :s emoticon bugfix (with 'Funny' set, SimpleSmileys is not affected)
+#   Templates now support custom Gravatar graphic (per template), fetch size changed from 60px to 64px (as per Gravatar specification)
+#   Bug   #73 - Escape slashes are now stripped out of 'Title' and 'Content' in all RSS Feeds.
+#   Bug   #80 - RSS Feed is now constructed in reverse chronological order like all RSS should be
+
+************ 2009/11 : !JoomlaComment v4.1 Alpha 1
+#   Huge code refactoring for front-end and backend, updating with Joomla 1.5 and PHP5 standards
+#   Better performance thanks to nearly half the database queries
+#   Fixed "Edit Comment" not preserving the indent for nested comments after Submit
+
+
+************ 2009/08 : !joomlacomment 4.0 beta2
+# fixed bug: autopublish comment set to 0 - user was not able to post a comment - http://compojoom.com/forum/17-jocomment-40/4762-getting-an-erro-message-on-comment-submit.html?limit=10&start=10#4926
+# fixed - installation.xml file was missing several language files
+# changed Begin to Start to reflect joomla's navigation strings
+# updated docman plugin - tested with docman 1.4
+# updated eventlist plugin - testes with eventlist 1.0.1
+# updated mmsblog plugin - tested with mmsblog 2.3.0
+# updated puarcade plugin - tested with puarcated 2.3.1
+# updated seyret plugin - tested with seyret 0.2.8.5
+
+$ updated italian frontend translation - thanks to Andrea
+$ updated backend and frontend german translations - thanks to Yves Hoppe
++ added lithuanian translation - thanks to Justas Butkus
+$ updated french translation - thanks to Claude Malter
+$ updated hrvatski translation - thanks to
+$ added portoguese translation - thanks to Henrique Costa
++ rss is now part of the plugin files - this allows us to have rss on plugin basis
+
+************ 2009/05 : !joomlacomment 4.0 beta1
++ added support for akismet - thanks to Marcofolio.net
++ added support for gravatar - thanks to Marcofolio.net
+# fixed bug with date display and user time offset #47
+# fixed problems with utf8 characters
+# fixed wrong link to cb profiles
+# fixed bug #46 - unable to include or exlude mmsblog categories
+# fixed bug #45 - no more hardcoded strings in the template
+# missing input website field with the akostyle template - http://www.compojoom.com/forum.html?func=view&catid=10&id=4218
+# fixed small security hole - user were able to post comments even if only registered was set to yes
++ mouse over emoticons show the BB code - thanks to JonusC
++ added new emoticon set - thanks to JonusC for sharing!
+#+ added new function for word wrapping
+# removed the default code that was making calls to openx.org in alpha3
+# advertisement code is now stored in the database
+# added a lot of CSS fixes to the modern template
+# removed all hardcoded whitespaces - using only css now!
+# added title to the ubb img code
+# manage comment screen was showing all the comment instead of the first 200 symbols
+
+$ added kurdish language file - thanks to Welat!
+$ added mongolian language file - thanks to Almas!
+$ added uzbek language file - thanks to Ulugov Anvar!
+$ replaced brazilian_portuguese with the updated version of Ronildo Costa
+$ added latvian language file - thanks to Imants Horsts!
+$ added vietnamese frontend and backend language files - thanks to Khac Vinh Pham!
+$ updated czeck language file - thanks to Jan Vodolan!
+$ added estonian frontend and backend language files - thanks to Bil Blo!
+$ changed chinese_simplified and chinese_traditional to simplified_chinese and traditional_chinese - thanks to baijianpeng!
+$ added chinese simplified and traditional backend files - thanks to baijianpeng!
+$ added swedish language file - thanks to elma!
+$ added ukrainian language file - thanks to lavva!
+$ updated germani and germanf language files - thanks to Stroganoff
+
+************ 2009/04 : !jocomment 4.0 alpha 3
+# fixed a bug with mysqli on some configurations
+# fixed a bug with multiple css inclusion in the head #6
+# fixed several SEF url issues
+# quotes and apostrophes not escaped correctly # 35
+# fixed pagination issue #39
+# fixed error with MTdefault-emotop template #4
+# fixed problems with utf-8 characters #44
+
++ added new template fixing comment indent problems (the schema to be used from
+now on)
++ added mmsblog plugin
+
+************ 2009/02 : !jocomment 4.0 alpha 2
+- compatible with joomla 1.5
+- changed the functions for the length parameter - now UTF-8 aware.
+- several lists fixes for backend
+- added a table class folder

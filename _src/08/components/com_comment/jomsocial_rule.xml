@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jomsocial>
+     <component>CompojoomComment</component>
+     <rules>
+          <rule>
+	      <name>Comment on an item</name>
+	      <description>Give points if an user comment on an item within joomla</description>
+	      <action_string>com_comment.addComment</action_string>
+	      <publish>true</publish>
+	      <points>1</points>
+	      <access_level>1</access_level>
+          </rule>
+		  <rule>
+	      <name>Delete a comment</name>
+	      <description>Give points if an user  delete a comment</description>
+	      <action_string>com_comment.deleteComment</action_string>
+	      <publish>true</publish>
+	      <points>1</points>
+	      <access_level>1</access_level>
+          </rule>
+		  <rule>
+	      <name>Positive Vote comment</name>
+	      <description>Give points if an user comment vote on a comment</description>
+	      <action_string>com_comment.positiveVote</action_string>
+	      <publish>true</publish>
+	      <points>1</points>
+	      <access_level>1</access_level>
+          </rule>
+		  <rule>
+	      <name>Negative Vote comment</name>
+	      <description>Give points if an user comment vote on a comment</description>
+	      <action_string>com_comment.negativeVote</action_string>
+	      <publish>true</publish>
+	      <points>1</points>
+	      <access_level>1</access_level>
+          </rule>
+     </rules>
+</jomsocial>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+  <name>Content - !CompojoomComment</name>
+  <author>Daniel Dimitrov </author>
+  <creationDate>November 2009</creationDate>
+  <copyright>Copyright(C) Daniel Dimitrov All rights reserved!</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+  <authorEmail>danielsd_bg@yahoo.fr</authorEmail>
+  <authorUrl>http://compojoom.com</authorUrl>
+  <version>4.1</version>
+  <description />
+  <files>
+    <filename plugin="joscomment">joscomment.php</filename>
+  </files>
+	<params>
+		<param name="printView" type="radio" default="0" label="Show comments in print view" description="If yes, comments will be shown in print view.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>

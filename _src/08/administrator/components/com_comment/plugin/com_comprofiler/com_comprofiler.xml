@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="compojoomPlugin" group="com_comprofiler" method="upgrade">
+  <name>CompojoomComment - CB plugin</name>
+  <author>Daniel Dimitrov </author>
+  <creationDate>November 2010</creationDate>
+  <copyright>Copyright(C) Daniel Dimitrov All rights reserved!</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+  <authorEmail>danielsd_bg@yahoo.fr</authorEmail>
+  <authorUrl>http://compojoom.com</authorUrl>
+  <version>4.1</version>
+  <description />
+  <files>
+    <filename compojoomPlugin="com_comprofiler">josc_com_comprofiler.php</filename>
+	<filename compojoomPlugin="com_comprofiler">josc_com_comprofiler.class.php</filename>
+	<filename compojoomPlugin="com_comprofiler">index.html</filename>
+  </files>
+</install>

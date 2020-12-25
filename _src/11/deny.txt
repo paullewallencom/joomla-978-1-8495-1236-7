@@ -1,0 +1,4 @@
+order allow,deny
+deny from xxx.xxx.xxx.xxx
+deny from xxx.xxx.xxx.xxx
+allow from all
